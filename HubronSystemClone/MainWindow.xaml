@@ -8,16 +8,16 @@
         Title="Login" Height="600" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="20" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="20" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="20"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
 
         <TextBlock  Grid.Column="1" Grid.Row="1" Margin="20 10" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontWeight="Bold" FontSize="20">
@@ -27,10 +27,10 @@
         Password:
         </TextBlock>
 
-        <TextBox Grid.Column="2" Grid.Row="1" MaxLines="1" FontSize="20" Height="30" VerticalAlignment="Bottom" Margin="20 5" BorderThickness="3">
-            
-        </TextBox>
+        <TextBox Grid.Column="2" Grid.Row="1" MaxLines="1" FontSize="20" Height="30" Width="200" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20 5" BorderThickness="3" />
+        <PasswordBox Grid.Column="2" Grid.Row="2"  FontSize="20" Height="30" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20 5" BorderThickness="3"/>
 
-        
+
+
     </Grid>
 </Window>
