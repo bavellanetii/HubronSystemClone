@@ -3,34 +3,61 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:HubronSystemClone"
         mc:Ignorable="d"
-        Title="Login" Height="600" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20" />
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="20" />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="20"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="20"/>
-        </Grid.RowDefinitions>
-
-        <TextBlock  Grid.Column="1" Grid.Row="1" Margin="20 10" VerticalAlignment="Bottom" HorizontalAlignment="Right" FontWeight="Bold" FontSize="20">
-        Username:
-        </TextBlock>
-        <TextBlock Grid.Column="1" Grid.Row="2" Margin="20 10" VerticalAlignment="top" HorizontalAlignment="Right" FontWeight="Bold" FontSize="20">
-        Password:
-        </TextBlock>
-
-        <TextBox Grid.Column="2" Grid.Row="1" MaxLines="1" FontSize="20" Height="30" Width="200" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="20 5" BorderThickness="3" />
-        <PasswordBox Grid.Column="2" Grid.Row="2"  FontSize="20" Height="30" Width="200" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20 5" BorderThickness="3"/>
+        Title="Login"  Height="760" Width="450"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Background="{x:Null}"
+        AllowsTransparency="True">
 
 
+    <materialDesign:Card UniformCornerRadius="15" Background="{DynamicResource MaterialDesignPaper}" Margin="25">
 
-    </Grid>
+        <StackPanel>
+        
+        <Button Margin="16 10 20 6" x:Name="btn_exit" ToolTip="Close Application click=exitApp" Content="Close" Style="{StaticResource MaterialDesignFlatButton}"
+                materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="35" Width="80"
+                HorizontalAlignment="right" FontSize="18"/>
+
+            <Image Source="logo.png" Margin="125 60 125 20" />
+            
+            <TextBlock Text="Welcome Back!" Margin="0 25 0 5" HorizontalAlignment="Center"
+                       FontWeight="Bold" FontSize="28"/>
+            
+            <TextBlock Text="Log In To Your Existing Account" FontSize="17" FontWeight="SemiBold" 
+                       HorizontalAlignment="Center"/>
+
+            <TextBox Margin="0 50 0 0" x:Name="txtUsername" Width="300" FontSize="18"
+                     materialDesign:HintAssist.Hint="Enter Username" BorderThickness="2"
+                     BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}" />
+
+            <PasswordBox Margin="0 20 0 0" x:Name="txtPassword" Width="300" FontSize="18"
+                     materialDesign:HintAssist.Hint="Enter Password" BorderThickness="2"
+                     BorderBrush="{DynamicResource MaterialDesignDivider}" 
+                     Style="{StaticResource MaterialDesignOutlinedPasswordBox}" />
+
+            <Button Margin="0 20 0 0" Name="loginBtn" 
+                    Style="{StaticResource MaterialDesignFlatMidBgButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                    Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="10" 
+                    Content="LOG IN" FontSize="18" />
+            
+            <Button Margin="0 20 0 0" Name="signupBtn" 
+                    Style="{StaticResource MaterialDesignFlatButton}" materialDesign:ShadowAssist.ShadowDepth="Depth0"
+                    Height="53" Width="300" materialDesign:ButtonAssist.CornerRadius="10" 
+                    Content="Create Account" FontSize="18" />
+
+
+        </StackPanel>
+
+
+    </materialDesign:Card>
+
+
+
+
+
 </Window>
