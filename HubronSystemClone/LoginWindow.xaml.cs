@@ -29,5 +29,12 @@ namespace HubronSystemClone
         {
             Close();
         }
+
+        private void signupBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            Window registerWindow = new RegisterWindow();
+            registerWindow.Show();
+        }
     }
 }
