@@ -20,7 +20,7 @@
         
         <Button Margin="16 10 20 6" x:Name="btn_exit" ToolTip="Close Application click=exitApp" Content="Close" Style="{StaticResource MaterialDesignFlatButton}"
                 materialDesign:ShadowAssist.ShadowDepth="Depth0" Height="35" Width="80"
-                HorizontalAlignment="right" FontSize="18"/>
+                HorizontalAlignment="right" FontSize="18" Click="btn_exit_Click"/>
 
             <Image Source="logo.png" Margin="125 60 125 20" />
             

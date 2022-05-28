@@ -24,5 +24,10 @@ namespace HubronSystemClone
         {
             InitializeComponent();
         }
+
+        private void btn_exit_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
